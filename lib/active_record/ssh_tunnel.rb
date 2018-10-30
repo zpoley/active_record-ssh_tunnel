@@ -34,7 +34,7 @@ module ActiveRecord
 
       remove_connection
       if ActiveRecord::VERSION::MAJOR >= 5
-        connection_handler.establish_connection spec
+        connection_handler.establish_connection spec.config
       else
         connection_handler.establish_connection self, spec
       end
